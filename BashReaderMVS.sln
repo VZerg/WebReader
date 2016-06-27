@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BashReaderMVS", "BashReader
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BashReaderMVS.Tests", "BashReaderMVS.Tests\BashReaderMVS.Tests.csproj", "{B46F794F-6F2B-40DC-B964-48AC682EF65F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BashReader.Data", "BashReader.Data\BashReader.Data.csproj", "{0A2E2B69-5387-4C01-9490-C01BC7EB97FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BashReader.Model", "BashReader.Model\BashReader.Model.csproj", "{0ABAA1DB-1B4B-48F2-B757-6CAE66CA51AB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{B46F794F-6F2B-40DC-B964-48AC682EF65F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B46F794F-6F2B-40DC-B964-48AC682EF65F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B46F794F-6F2B-40DC-B964-48AC682EF65F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A2E2B69-5387-4C01-9490-C01BC7EB97FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A2E2B69-5387-4C01-9490-C01BC7EB97FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A2E2B69-5387-4C01-9490-C01BC7EB97FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A2E2B69-5387-4C01-9490-C01BC7EB97FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0ABAA1DB-1B4B-48F2-B757-6CAE66CA51AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0ABAA1DB-1B4B-48F2-B757-6CAE66CA51AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0ABAA1DB-1B4B-48F2-B757-6CAE66CA51AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0ABAA1DB-1B4B-48F2-B757-6CAE66CA51AB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
