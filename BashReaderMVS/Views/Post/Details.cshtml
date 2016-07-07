@@ -1,0 +1,45 @@
+﻿@model BashReaderMVS.Models.PostViewModel
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<h2>Details</h2>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PublishDate)
+        </th>
+        <th></th>
+    </tr>
+
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => Model.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.PublishDate)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+                @Html.ActionLink("Главная", "Index", new { /*id = item.Id*/ }) |
+                @Html.ActionLink("Delete", "Delete", new { id = Model.Id })
+            </td>
+        </tr>
+    
+
+</table>
+
+

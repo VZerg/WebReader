@@ -1,0 +1,29 @@
+﻿@model IEnumerable<BashReaderMVS.Models.PostViewModel>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@Styles.Render("~/Content/bash.css")
+<h2>Index</h2>
+
+
+<span class="active">@Html.ActionLink("Update posts from Bash.im", "Create", new { })</span>
+@foreach (var item in Model)
+{
+    <div class="body">
+        <div class="quote">
+            <div class="actions">
+                <span class="rating-o"><span class="rating">@Html.DisplayFor(modelItem => item.Rating)</span></span>
+                <span class="date">@Html.DisplayFor(modelItem => item.PublishDate)</span>
+                <a class="id">@Html.DisplayFor(modelItem => item.PostId)</a>
+            </div>
+            <div class="text">@Html.DisplayFor(modelItem => item.ShortDescription) |
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.Id })</div>
+        </div>
+    </div>
+}
+
+
