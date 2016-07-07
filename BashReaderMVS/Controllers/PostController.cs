@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System;
+using System.Globalization;
 using System.Web.Mvc;
 using BashReaderMVS.Models;
 using BashReader.Data;
@@ -10,6 +11,8 @@ namespace BashReaderMVS.Controllers
     public class PostController : Controller
     {
         private PostsRepository _repository = new PostsRepository();
+        private int newPost;
+
         // GET: Post
         public ActionResult Index()
         {
@@ -46,7 +49,7 @@ namespace BashReaderMVS.Controllers
             return RedirectToAction("Index");
         }
 
-        public ActionResult CreateAll()
+        public ActionResult CreatePostFromBash()
         {
             PageParser newPage = new PageParser();
             newPage.ParsePage();
@@ -55,10 +58,20 @@ namespace BashReaderMVS.Controllers
 
         public ActionResult Create()
         {
-
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Create(PostViewModel newPost)
+        {
+            _repository.Create(new Post {
+                PostId = newPost.PostId,
+                Rating = newPost.Rating,
+                PostName = newPost.Title,
+                PostText = newPost.Description,
+                PublishDate = DateTime.Now
+            });
             return RedirectToAction("Index");
         }
-
         public ActionResult Edit(Guid id)
         {
             PostViewModel post = new PostViewModel();
